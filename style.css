@@ -1,0 +1,278 @@
+body{
+
+margin:0;
+font-family:Arial;
+background:#020c2c;
+color:white;
+text-align:center;
+overflow-x:hidden;
+
+}
+
+
+/* NIGHT SKY */
+
+#stars{
+
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.4;
+z-index:-1;
+
+}
+
+
+/* TITLE */
+
+h1{
+
+font-size:3rem;
+color:#4fc3ff;
+
+}
+
+
+/* GLOWING 18 */
+
+.glow18{
+
+font-size:120px;
+color:#00bfff;
+text-shadow:
+0 0 10px #00bfff,
+0 0 20px #00bfff,
+0 0 40px #00bfff;
+
+animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{transform:scale(1)}
+to{transform:scale(1.1)}
+
+}
+
+
+/* COUNTDOWN */
+
+.countdown{
+
+font-size:24px;
+margin:20px;
+
+}
+
+
+/* 3D CAKE */
+
+.cakeSection{
+
+margin-top:40px;
+perspective:1000px;
+
+}
+
+.cake3d{
+
+width:200px;
+margin:auto;
+transform-style:preserve-3d;
+animation:rotateCake 10s linear infinite;
+
+}
+
+.layer{
+
+height:40px;
+border-radius:10px;
+margin:5px 0;
+
+}
+
+.l1{background:#3399ff}
+.l2{background:#66ccff}
+.l3{background:#99ddff}
+
+@keyframes rotateCake{
+
+from{transform:rotateY(0)}
+to{transform:rotateY(360deg)}
+
+}
+
+
+/* CANDLE */
+
+.candle{
+
+width:10px;
+height:40px;
+background:white;
+margin:auto;
+position:relative;
+
+}
+
+.flame{
+
+width:12px;
+height:18px;
+background:orange;
+border-radius:50%;
+position:absolute;
+top:-18px;
+left:-1px;
+box-shadow:0 0 20px yellow;
+
+}
+
+
+/* PHOTO GALLERY */
+
+.gallery{
+
+margin-top:40px;
+
+}
+
+.photos{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.photos img{
+
+width:220px;
+height:260px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+
+}
+
+
+/* TEDDIES */
+
+.teddyContainer{
+
+margin-top:20px;
+
+}
+
+.teddy{
+
+width:120px;
+margin:10px;
+animation:dance 1s infinite alternate;
+
+}
+
+@keyframes dance{
+
+from{transform:rotate(-10deg) translateY(0)}
+to{transform:rotate(10deg) translateY(-10px)}
+
+}
+
+
+/* MESSAGE */
+
+.message{
+
+max-width:700px;
+margin:auto;
+padding:20px;
+line-height:1.6;
+
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+
+background:#25D366;
+padding:15px 30px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-size:18px;
+display:inline-block;
+margin:30px;
+
+}
+
+
+/* BALLOONS */
+
+.balloon{
+
+position:fixed;
+bottom:-100px;
+width:40px;
+height:50px;
+border-radius:50%;
+cursor:pointer;
+animation:float 10s linear;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+100%{transform:translateY(-120vh)}
+
+}
+
+
+/* SPARKLE */
+
+.sparkle{
+
+position:fixed;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+pointer-events:none;
+animation:spark 0.6s forwards;
+
+}
+
+@keyframes spark{
+
+to{
+opacity:0;
+transform:scale(2);
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.glow18{
+font-size:70px;
+}
+
+.teddy{
+width:80px;
+}
+
+.photos img{
+width:160px;
+height:200px;
+}
+
+}
